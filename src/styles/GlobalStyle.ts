@@ -1,19 +1,25 @@
-import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-    // css 초기값 정의
-    ${reset}
+      ${reset}
+      * {
+        box-sizing: border-box;
+      }
+      body{
+        font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+      }
 
-    // 따로 스타일링
-    a{
-        text-decoration:none;
-        color:inherit;
-    }
+      @media only screen and (max-width: 768px) {
+        body {
+          font-size: 12px;
+        }
+      }
 
-    *{
-        box-sizing:border-box;
-    }
-`;
-
+      @media only screen and (max-width: 576px) {
+        body {
+          font-size: 10px;
+        }
+      }
+    `;
 export default GlobalStyle;
