@@ -1,5 +1,7 @@
 import React from 'react';
+import { Provider } from 'mobx-react';
 import ReactDOM from 'react-dom/client';
+import stores from './stores';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from './styles/GlobalStyle';
 import theme from './styles/theme';
@@ -9,8 +11,13 @@ import './styles/common.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
-	<ThemeProvider theme={theme}>
-		<GlobalStyle />
-		<Router />
-	</ThemeProvider>,
+	<Provider store={stores}>
+		<React.StrictMode>
+			<ThemeProvider theme={theme}>
+				<GlobalStyle />
+				<Router />
+			</ThemeProvider>
+			,
+		</React.StrictMode>
+	</Provider>,
 );
