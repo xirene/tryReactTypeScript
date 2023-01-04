@@ -8,7 +8,7 @@ import theme from './styles/theme';
 import Router from './Router';
 import './styles/reset.scss';
 import './styles/common.scss';
-
+import TodoForm from './components/TodoForm';
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
 	<Provider store={stores}>
@@ -16,8 +16,8 @@ root.render(
 			<ThemeProvider theme={theme}>
 				<GlobalStyle />
 				<Router />
+				<TodoForm />
 			</ThemeProvider>
-			,
 		</React.StrictMode>
 	</Provider>,
 );
