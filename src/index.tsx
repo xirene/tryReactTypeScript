@@ -9,6 +9,8 @@ import Router from './Router';
 import './styles/reset.scss';
 import './styles/common.scss';
 import TodoForm from './components/TodoForm';
+import TodoItem from './components/TodoItem';
+import TodoList from './components/TodoList';
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
 	<Provider store={stores}>
@@ -17,6 +19,8 @@ root.render(
 				<GlobalStyle />
 				<Router />
 				<TodoForm />
+				<TodoItem />
+				<TodoList />
 			</ThemeProvider>
 		</React.StrictMode>
 	</Provider>,
