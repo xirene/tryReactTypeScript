@@ -19,7 +19,6 @@ root.render(
 				<GlobalStyle />
 				<Router />
 				<TodoForm />
-				<TodoItem />
 				<TodoList />
 			</ThemeProvider>
 		</React.StrictMode>
